@@ -6,8 +6,8 @@
     <title>Phase 0-1: HTML基礎確認</title>
     <script>
         function calculate(){ 
-      　   var weight = document.getElementById('weight');
-           var height = document.getElementBYId('height');
+      　   var weight = parseFloat(document.getElementById('weight').value);
+           var height = parseFloat(document.getElementBYId('height').value);
 
            var bmi = weigt / (height * height) / 10000;
 
