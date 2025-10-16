@@ -9,7 +9,7 @@
       　   var weight = parseFloat(document.getElementById('weight').value);
            var height = parseFloat(document.getElementBYId('height').value);
 
-           var bmi = weigt / (height * height) / 10000;
+           var bmi = weigt / (height * height) / 10000.0;
 
            if (bmi < 18.5){
                document.getElementById('text').innerHTML = bmi +  " 低体重";
