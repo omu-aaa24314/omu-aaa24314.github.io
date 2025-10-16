@@ -6,17 +6,23 @@
     <title>Phase 0-1: HTML基礎確認</title>
     <script>
         window.addEventListener('DOMContentLoaded', function(){
-            var weight = document.getElementById('bmi')
-            var  bmi = document.getElementByld("text") 
-
-            bmi.addEventListener("change",function(){
-                if (bmi < 18.5)
-                    document.getElementById('text').innerHTML = "低体重";
-                else if (bmi < 25)
-                    document.getElementById('text').innerHTML = "標準";
-                else
-                    document.getElemntById('text').innerHTML = "肥満";
             
+        　　var button = document.getElementById('button');
+
+         　 button.addEventListener("click",function(){
+
+          　var weight = document.getElementById('weight');
+            var height = document.getElementBYId('height');
+
+            var bmi = weigt / (height * height) / 10000;
+
+            if (bmi < 18.5)
+                document.getElementById('text').innerHTML = bmi +  " 低体重";
+            else if (bmi < 25)
+                document.getElementById('text').innerHTML = bmi + " 標準";
+            else
+                document.getElemntById('text').innerHTML = bmi + " 肥満";
+            });
     </script>
 </head>
 <body>
