@@ -7,7 +7,7 @@
     <script>
         window.addEventListener('DOMContentLoaded', function(){
             
-        　　var button = document.getElementById('button');
+        　　var button = document.getElementById('btn');
 
          　 button.addEventListener("click",function(){
 
@@ -28,11 +28,10 @@
 <body>
     <div>
     <h2>BMI指標計算</h2>
-<form oninput="bmi.value = Math.round(Number(weight.value) / Math.pow(Number(height.value)/100, 2) * 10) / 10">
     <p><label>体重(kg)：<input name="weight" type="number" step="any"></label></p>
     <p><label>身長(cm)：<input name="height" type="number" step="any"></label></p>
-    <p><label>BMI：<output id='bmi' name="bmi"></output></label></p>
-    <p id='text'></p>
+    <button type="button" id="btn">決定</button>
+    <p id='text'>測定中</p>
 </form>
     </div>
   <header>
