@@ -7,9 +7,9 @@
     <script>
         function calculate(){ 
       　   var weight = parseFloat(document.getElementById('weight').value);
-           var height = parseFloat(document.getElementBYId('height').value);
+           var height = parseFloat(document.getElementById('height').value);
 
-           var bmi = weigt / (height * height) / 10000.0;
+           var bmi = weight / (height * height) / 10000.0;
 
            if (bmi < 18.5){
                document.getElementById('text').innerHTML = bmi +  " 低体重";
@@ -27,10 +27,10 @@
   <div>
   <form>
     <h2>BMI指標計算</h2>
-    <p><label>体重(kg)：<input name="weight" type="number" step="any"></label></p>
-    <p><label>身長(cm)：<input name="height" type="number" step="any"></label></p>
+    <p><label>体重(kg)：<input id="weight" name="weight" type="number" step="any"></label></p>
+    <p><label>身長(cm)：<input id="height" name="height" type="number" step="any"></label></p>
     <button onclick="calculate()">決定</button>
-    <p id='text'>測定中</p>
+    <p id="text">測定中</p>
   </form>
   </div>
   <header>
