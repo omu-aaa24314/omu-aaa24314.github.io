@@ -4,6 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Phase 0-1: HTML基礎確認</title>
+    <script>
+        window.addEventListener('DOMContentLoaded', function(){
+            var weight = document.getElementById('bmi')
+            var  bmi = document.getElementByld("text") 
+
+            bmi.addEventListener("change",function(){
+                if (bmi < 18.5)
+                    document.getElementById('text').innerHTML = "低体重";
+                else if (bmi < 25)
+                    document.getElementById('text').innerHTML = "標準";
+                else
+                    document.getElemntById('text').innerHTML = "肥満";
+            
+    </script>
 </head>
 <body>
     <div>
@@ -11,7 +25,8 @@
 <form oninput="bmi.value = Math.round(Number(weight.value) / Math.pow(Number(height.value)/100, 2) * 10) / 10">
     <p><label>体重(kg)：<input name="weight" type="number" step="any"></label></p>
     <p><label>身長(cm)：<input name="height" type="number" step="any"></label></p>
-    <p><label>BMI：<output name="bmi"></output></label></p>
+    <p><label>BMI：<output id='bmi' name="bmi"></output></label></p>
+    <p id='text'></p>
 </form>
     </div>
   <header>
